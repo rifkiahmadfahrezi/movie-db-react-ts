@@ -6,7 +6,7 @@ export default function Root() {
     <>
       <Navbar />
 
-      <main className="container mx-auto px-4">
+      <main className="mb-[50px] container mx-auto px-4">
          <Outlet />
       </main>
     </>

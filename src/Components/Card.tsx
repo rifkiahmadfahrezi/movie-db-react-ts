@@ -13,10 +13,17 @@ const Card = (props: Props) => {
 
    const {id, image, title, description, rating} = props
 
+   function handleImgError(e : any) {
+      const target = e.target as Element
+
+      target.setAttribute('src', `https://fakeimg.pl/400x200?text=poster&font=lobster`)
+   }
+
   return (
    <div className="card min-w-56 drop-shadow-[0_0_5px_rgba(255,255,255,0.25)] bg-base-100" data-testid="card">
       <figure>
          <img 
+            onError={handleImgError}
             data-testid="card-image"
             loading='lazy'
             src={image} 
