@@ -5,8 +5,8 @@ import { movies } from '../../API/movies'
 import CardSkeleton from '../CardSkeleton'
 import { useSearchParams } from 'react-router-dom'
 
-
 const Main : React.FC = () => {
+
    const [searchParams] = useSearchParams()
 
    const [movieData, setMovieData] = useState<any[]>([])
